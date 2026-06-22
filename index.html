@@ -1,0 +1,976 @@
+
+<!DOCTYPE html>
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+<title>LMS WebApp Builder</title>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<!-- Chrome, Firefox OS and Opera -->
+<meta content='' name='theme-color'/>
+<!-- Windows Phone -->
+<meta content='' name='msapplication-navbutton-color'/>
+<meta content='blogger' name='generator'/>
+<link href='https://www.edudigital.id/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='https://www.edudigital.id/p/lms-webapp-builder.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="Edu Digital ID - Atom" href="https://www.edudigital.id/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Edu Digital ID - RSS" href="https://www.edudigital.id/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Edu Digital ID - Atom" href="https://www.blogger.com/feeds/3173387891674895264/posts/default" />
+<!--Can't find substitution for tag [blog.ieCssRetrofitLinks]-->
+<meta content='https://www.edudigital.id/p/lms-webapp-builder.html' property='og:url'/>
+<meta content='LMS WebApp Builder' property='og:title'/>
+<meta content='                 WebAPP Builder GAS-Blogger                                                                                                 ...' property='og:description'/>
+<meta content='https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_t7M_l2HHO1KYg8ArAXpM8LmPnAtrfNO9G1QJMrqIZyvy8PvGlHTNsWWSekMD24ryhaWb_rHYMvgKiamI8CVUT3tQ=w1200-h630-p-k-no-nu' property='og:image'/>
+<!-- Tailwind CSS -->
+<script src='https://cdn.tailwindcss.com'></script>
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap' rel='stylesheet'/>
+<!-- FontAwesome for Icons -->
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet'/>
+<script>//<![CDATA[
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        handwriting: ['Caveat', 'cursive'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#7C3AED',
+                            lightPurple: '#DDD6FE',
+                            darkPurple: '#5B21B6',
+                            yellow: '#FBBF24',
+                            lightYellow: '#FDE68A'
+                        }
+                    }
+                }
+            }
+        }
+    //]]></script>
+<style id='page-skin-1' type='text/css'><!--
+/* Custom Blob Shapes */
+.blob-1 { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+.blob-2 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+/* Hide Scrollbar for Swipeable Carousel */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.scribble-underline {
+position: relative;
+display: inline-block;
+}
+.scribble-underline::after {
+content: '';
+position: absolute;
+width: 110%;
+height: 12px;
+bottom: -2px;
+left: -5%;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0 5 Q 25 10, 50 5 T 100 5' stroke='%237C3AED' stroke-width='3' fill='transparent'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+z-index: -1;
+}
+.scribble-underline-yellow::after {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5' stroke='%23FBBF24' stroke-width='3' fill='transparent'/%3E%3C/svg%3E");
+}
+
+--></style>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=3173387891674895264&amp;zx=ccf97371-13de-4a45-abd7-cff060460fc3' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=3173387891674895264&amp;zx=ccf97371-13de-4a45-abd7-cff060460fc3' rel='stylesheet'/></noscript>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+</head>
+<body class='font-sans text-gray-800 bg-white overflow-x-hidden'>
+<!-- Navigation (Tampil di semua halaman) -->
+<nav class='container mx-auto px-6 py-4 flex justify-between items-center relative z-20'>
+<!-- Logo -->
+<div class='flex items-center gap-2'>
+<div class='w-8 h-8 rounded-lg bg-brand-purple flex items-center justify-center text-white font-bold blob-1'>
+                E
+            </div>
+<a class='font-bold text-xl tracking-tight' href='https://www.edudigital.id/'>EduDigital</a>
+</div>
+<!-- Menu Desktop -->
+<div class='hidden md:flex items-center space-x-8 font-medium text-gray-600'>
+<a class='hover:text-brand-purple transition' href='https://www.edudigital.id/'>Beranda</a>
+<a class='hover:text-brand-purple transition' href='#'>Tentang</a>
+<!-- Dropdown Menu -->
+<div class='relative group'>
+<button class='flex items-center gap-1 hover:text-brand-purple transition py-2 focus:outline-none'>
+                    Kategori <i class='fa-solid fa-chevron-down text-[10px] ml-1 transition-transform duration-300 group-hover:rotate-180'></i>
+</button>
+<!-- Submenu Items -->
+<div class='absolute left-0 top-full mt-1 w-48 bg-white rounded-xl shadow-lg shadow-purple-500/10 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden'>
+<div class='py-2'>
+<a class='block px-5 py-2.5 text-sm hover:bg-brand-lightPurple/50 hover:text-brand-purple transition' href='/search/label/Aplikasi'>Aplikasi</a>
+<a class='block px-5 py-2.5 text-sm hover:bg-brand-lightPurple/50 hover:text-brand-purple transition' href='/search/label/Kegiatan'>Kegiatan</a>
+<a class='block px-5 py-2.5 text-sm hover:bg-brand-lightPurple/50 hover:text-brand-purple transition' href='/search/label/Prestasi'>Prestasi</a>
+</div>
+</div>
+</div>
+<a class='hover:text-brand-purple transition' href='#'>Kontak</a>
+</div>
+<!-- Tombol Daftar / Hamburger Menu (Mobile) -->
+<div class='flex items-center gap-4'>
+<a class='hidden md:block bg-brand-purple text-white px-6 py-2 rounded-full font-medium shadow-lg shadow-purple-500/30 hover:bg-purple-700 transition' href='https://www.edudigital.id/p/lms-webapp-builder.html'>
+                Masuk LMS
+            </a>
+<!-- Ikon menu untuk HP -->
+<button class='md:hidden text-gray-600 hover:text-brand-purple focus:outline-none' id='mobile-menu-btn'>
+<i class='fa-solid fa-bars text-2xl'></i>
+</button>
+</div>
+<!-- Menu Dropdown Mobile -->
+<div class='hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 z-50 md:hidden' id='mobile-menu'>
+<div class='flex flex-col px-6 py-6 space-y-4 font-medium text-gray-600'>
+<a class='hover:text-brand-purple' href='https://www.edudigital.id/'>Beranda</a>
+<a class='hover:text-brand-purple' href='#'>Tentang</a>
+<div class='flex flex-col space-y-3 py-2 border-y border-gray-50'>
+<span class='text-gray-900 font-bold'>Kategori</span>
+<a class='pl-4 hover:text-brand-purple' href='/search/label/Aplikasi'>- Aplikasi</a>
+<a class='pl-4 hover:text-brand-purple' href='/search/label/Kegiatan'>- Kegiatan</a>
+<a class='pl-4 hover:text-brand-purple' href='/search/label/Prestasi'>- Prestasi</a>
+</div>
+<a class='hover:text-brand-purple' href='#'>Kontak</a>
+<a class='bg-brand-purple text-white px-6 py-3 mt-4 rounded-full font-medium text-center shadow-lg hover:bg-purple-700 transition' href='https://www.edudigital.id/p/lms-webapp-builder.html'>
+                    Masuk LMS
+                </a>
+</div>
+</div>
+</nav>
+<!-- LANDING PAGE: Hanya tampil di Homepage -->
+<!-- AREA WIDGET BLOGGER (Untuk membaca postingan sesungguhnya) -->
+<!-- Widget ini DIMATIKAN di Homepage untuk mencegah script dari dalam postingan berjalan otomatis -->
+<div class='container mx-auto px-6 py-12 min-h-screen'>
+<div class='main section' id='main-blog'><div class='widget Blog' data-version='2' id='Blog1'>
+<div class='blog-posts hfeed container'>
+<article class='post-outer-container'>
+<div class='post-outer'>
+<div class='post'>
+<script type='application/ld+json'>{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.edudigital.id/p/lms-webapp-builder.html"
+  },
+  "headline": "LMS WebApp Builder","description": "WebAPP Builder GAS-Blogger                                                                                                 ...","datePublished": "2026-04-25T16:57:00-07:00",
+  "dateModified": "2026-05-10T06:35:13-07:00","image": {
+    "@type": "ImageObject","url": "https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_t7M_l2HHO1KYg8ArAXpM8LmPnAtrfNO9G1QJMrqIZyvy8PvGlHTNsWWSekMD24ryhaWb_rHYMvgKiamI8CVUT3tQ=w1200-h630-p-k-no-nu",
+    "height": 630,
+    "width": 1200},"publisher": {
+    "@type": "Organization",
+    "name": "Blogger",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/h60/",
+      "width": 206,
+      "height": 60
+    }
+  },"author": {
+    "@type": "Person",
+    "name": "EDU DIGITAL"
+  }
+}</script>
+<a name='7602129351725913971'></a>
+<h3 class='post-title entry-title'>
+LMS WebApp Builder
+</h3>
+<div class='post-header'>
+<div class='post-header-line-1'>
+<div class='byline post-share-buttons goog-inline-block'>
+<div aria-owns='sharing-popup-Blog1-header-1-7602129351725913971' class='sharing' data-title='LMS WebApp Builder'>
+<button aria-controls='sharing-popup-Blog1-header-1-7602129351725913971' aria-label='Berbagi' class='sharing-button touch-icon-button' id='sharing-button-Blog1-header-1-7602129351725913971' role='button'>
+<div class='flat-icon-button ripple'>
+<svg class='svg-icon-24'>
+<use xlink:href='/responsive/sprite_v1_6.css.svg#ic_share_black_24dp' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+</div>
+</button>
+<div class='share-buttons-container'>
+<ul aria-hidden='true' aria-label='Berbagi' class='share-buttons hidden' id='sharing-popup-Blog1-header-1-7602129351725913971' role='menu'>
+<li>
+<span aria-label='Dapatkan link' class='sharing-platform-button sharing-element-link' data-href='https://www.blogger.com/share-post.g?blogID=3173387891674895264&pageID=7602129351725913971&target=' data-url='https://www.edudigital.id/p/lms-webapp-builder.html' role='menuitem' tabindex='-1' title='Dapatkan link'>
+<svg class='svg-icon-24 touch-icon sharing-link'>
+<use xlink:href='/responsive/sprite_v1_6.css.svg#ic_24_link_dark' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='platform-sharing-text'>Dapatkan link</span>
+</span>
+</li>
+<li>
+<span aria-label='Bagikan ke Facebook' class='sharing-platform-button sharing-element-facebook' data-href='https://www.blogger.com/share-post.g?blogID=3173387891674895264&pageID=7602129351725913971&target=facebook' data-url='https://www.edudigital.id/p/lms-webapp-builder.html' role='menuitem' tabindex='-1' title='Bagikan ke Facebook'>
+<svg class='svg-icon-24 touch-icon sharing-facebook'>
+<use xlink:href='/responsive/sprite_v1_6.css.svg#ic_24_facebook_dark' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='platform-sharing-text'>Facebook</span>
+</span>
+</li>
+<li>
+<span aria-label='Bagikan ke X' class='sharing-platform-button sharing-element-twitter' data-href='https://www.blogger.com/share-post.g?blogID=3173387891674895264&pageID=7602129351725913971&target=twitter' data-url='https://www.edudigital.id/p/lms-webapp-builder.html' role='menuitem' tabindex='-1' title='Bagikan ke X'>
+<svg class='svg-icon-24 touch-icon sharing-twitter'>
+<use xlink:href='/responsive/sprite_v1_6.css.svg#ic_24_twitter_dark' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='platform-sharing-text'>X</span>
+</span>
+</li>
+<li>
+<span aria-label='Bagikan ke Pinterest' class='sharing-platform-button sharing-element-pinterest' data-href='https://www.blogger.com/share-post.g?blogID=3173387891674895264&pageID=7602129351725913971&target=pinterest' data-url='https://www.edudigital.id/p/lms-webapp-builder.html' role='menuitem' tabindex='-1' title='Bagikan ke Pinterest'>
+<svg class='svg-icon-24 touch-icon sharing-pinterest'>
+<use xlink:href='/responsive/sprite_v1_6.css.svg#ic_24_pinterest_dark' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='platform-sharing-text'>Pinterest</span>
+</span>
+</li>
+<li>
+<span aria-label='Email' class='sharing-platform-button sharing-element-email' data-href='https://www.blogger.com/share-post.g?blogID=3173387891674895264&pageID=7602129351725913971&target=email' data-url='https://www.edudigital.id/p/lms-webapp-builder.html' role='menuitem' tabindex='-1' title='Email'>
+<svg class='svg-icon-24 touch-icon sharing-email'>
+<use xlink:href='/responsive/sprite_v1_6.css.svg#ic_24_email_dark' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='platform-sharing-text'>Email</span>
+</span>
+</li>
+<li aria-hidden='true' class='hidden'>
+<span aria-label='Bagikan ke aplikasi lainnya' class='sharing-platform-button sharing-element-other' data-url='https://www.edudigital.id/p/lms-webapp-builder.html' role='menuitem' tabindex='-1' title='Bagikan ke aplikasi lainnya'>
+<svg class='svg-icon-24 touch-icon sharing-sharingOther'>
+<use xlink:href='/responsive/sprite_v1_6.css.svg#ic_more_horiz_black_24dp' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='platform-sharing-text'>Aplikasi Lainnya</span>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='post-body entry-content float-container' id='post-body-7602129351725913971'>
+<!--DOCTYPE html-->
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAPP Builder GAS-Blogger</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS KHUSUS UNTUK MENUTUPI BLOGGER TEMPLATE */
+        body { margin: 0; padding: 0; overflow: hidden; background-color: #f3f4f8; }
+        
+        #app-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999999;
+            background-color: #f3f4f8; /* Soft background ala UI modern */
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        #app-container a, #app-container a:hover, #app-container a:visited, #app-container a:active { 
+            text-decoration: none !important; border-bottom: none !important; box-shadow: none !important;
+        }
+
+        #navbar-iframe, .bg-photo-overlay, .blogger-click-trap { display: none !important; }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #5b21b6; /* Violet 800 */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .blogger-thumbnail { display: none; }
+        
+        /* Smooth Accordion for FAQ */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+
+        /* Hide scrollbar for mobile bottom nav */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div class="blogger-thumbnail">
+        <img alt="WebAPP Builder GAS-Blogger" src="https://iili.io/BIa29t9.md.png" />
+    </div>
+
+    <div id="app-container">
+        
+        <div id="global-loader" class="fixed inset-0 bg-white/80 z-[100] hidden items-center justify-center flex-col backdrop-blur-sm">
+            <div class="loader mb-4"></div>
+            <p class="text-violet-800 font-semibold text-sm" id="loader-text">Memproses...</p>
+        </div>
+
+        <!-- LAYER: LOGIN SCREEN (MODERN PURPLE THEME) -->
+        <div id="login-screen" class="min-h-screen flex items-center justify-center p-4 md:p-8 bg-[#eef2f6] relative overflow-hidden">
+            <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
+                <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-violet-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+                <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+            </div>
+
+            <div class="bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden max-w-5xl w-full flex flex-col md:flex-row border border-white relative z-10 min-h-[600px]">
+                <div class="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative">
+                    <img alt="Logo" class="w-16 h-16 md:hidden mx-auto mb-6 object-contain" src="https://iili.io/BIa29t9.md.png">
+                    
+                    <div class="text-center md:text-left mb-10">
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Welcome Back</h1>
+                        <p class="text-slate-500 text-sm">Please login to your account.</p>
+                    </div>
+                    
+                    <form id="login-form" class="space-y-5">
+                        <div>
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <i class="fa-regular fa-user text-slate-400 group-focus-within:text-violet-600 transition-colors"></i>
+                                </div>
+                                <input type="text" id="username" required class="block w-full pl-12 pr-4 py-4 bg-slate-50 border-none rounded-2xl text-sm font-medium focus:ring-2 focus:ring-violet-500 focus:bg-white transition-all text-slate-700" placeholder="Username">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <i class="fa-solid fa-lock text-slate-400 group-focus-within:text-violet-600 transition-colors"></i>
+                                </div>
+                                <input type="password" id="password" required class="block w-full pl-12 pr-4 py-4 bg-slate-50 border-none rounded-2xl text-sm font-medium focus:ring-2 focus:ring-violet-500 focus:bg-white transition-all text-slate-700" placeholder="Password">
+                            </div>
+                        </div>
+                        
+                        <div class="pt-2">
+                            <button type="submit" class="w-full md:w-auto md:min-w-[180px] bg-violet-600 hover:bg-violet-700 text-white font-bold py-4 px-8 rounded-2xl shadow-[0_8px_20px_rgba(124,58,237,0.25)] hover:shadow-[0_10px_25px_rgba(124,58,237,0.35)] hover:-translate-y-0.5 transition-all duration-300 mx-auto md:mx-0 block">
+                                Login Now
+                            </button>
+                        </div>
+                        <div id="login-alert" class="hidden mt-4 text-sm text-red-500 bg-red-50 p-4 rounded-xl border border-red-100 text-center font-medium"></div>
+                        
+                        <div class="mt-8 pt-6 border-t border-slate-100" id="preview-info">
+                            <p class="text-[10px] font-extrabold text-slate-400 mb-3 text-center md:text-left uppercase tracking-wider">Mode Preview Aktif</p>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <div class="flex-1 bg-slate-50 p-3 rounded-xl border border-slate-100 text-center md:text-left">
+                                    <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Admin</p>
+                                    <p class="text-xs text-violet-600 font-bold">admin / edudigital</p>
+                                </div>
+                                <div class="flex-1 bg-slate-50 p-3 rounded-xl border border-slate-100 text-center md:text-left">
+                                    <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Peserta</p>
+                                    <p class="text-xs text-violet-600 font-bold">peserta / edudigital</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="hidden md:flex w-1/2 bg-violet-600 relative items-center justify-center p-12 overflow-hidden">
+                    <div class="absolute inset-0 opacity-20"><svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full text-white fill-current"><path d="M0 100 C 20 0 50 0 100 100 Z"></path><path d="M0 50 C 30 100 70 0 100 50 Z" opacity="0.5"></path></svg></div>
+                    <div class="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+                    <div class="absolute bottom-10 left-10 w-48 h-48 bg-indigo-900/40 rounded-full blur-2xl"></div>
+                    <div class="relative z-10 w-full max-w-[340px] rounded-[2rem] bg-white/10 backdrop-blur-md border border-white/20 p-2.5 shadow-2xl transform transition-transform hover:scale-105 duration-500">
+                        <img alt="Graphic" class="w-full h-[420px] object-cover rounded-[1.5rem]" src="https://itbox.id/wp-content/uploads/2023/01/perbedaan-programmer-dan-developer.jpeg">
+                        <div class="absolute -left-6 top-1/2 -translate-y-1/2 bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_8px_20px_rgba(0,0,0,0.15)] animate-bounce"><i class="fa-solid fa-bolt text-amber-400 text-2xl"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LAYER: DASHBOARD LAYOUT -->
+        <div id="main-layout" class="hidden flex h-screen w-full">
+            
+            <!-- Desktop Sidebar -->
+            <aside class="w-64 bg-white hidden md:flex flex-col z-20 m-4 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-slate-50 overflow-hidden shrink-0">
+                <div class="p-6 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center text-violet-600 shadow-inner shrink-0">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                    </div>
+                    <div class="flex flex-col overflow-hidden">
+                        <span class="text-[15px] font-extrabold text-slate-800 leading-tight tracking-tight truncate">Webapp Builder</span>
+                        <span class="text-[10px] text-violet-500 font-bold uppercase tracking-wider">LMS Portal</span>
+                    </div>
+                </div>
+
+                <nav class="flex-1 px-4 py-2 space-y-1.5 overflow-y-auto" id="sidebar-menu">
+                    <!-- Dinamis berdasarkan Role -->
+                </nav>
+
+                <div class="p-4 border-t border-slate-50 bg-white">
+                    <div class="bg-[#292c7a] rounded-2xl p-4 flex flex-col items-center text-center shadow-lg shadow-[#292c7a]/30 relative overflow-hidden">
+                        <div class="absolute -right-4 -top-4 w-16 h-16 bg-white/10 rounded-full blur-xl"></div>
+                        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white mb-2 backdrop-blur-sm">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                        </div>
+                        <p id="user-display-name" class="font-bold text-white text-sm truncate w-full">User</p>
+                        <p id="user-display-role" class="text-[10px] text-indigo-200 font-semibold mb-3 uppercase tracking-wider">Role</p>
+                        <button onclick="logout()" class="w-full bg-white/10 hover:bg-white/20 text-white py-2 rounded-xl text-xs font-bold transition-colors border border-white/10">
+                            Log out
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+                
+                <!-- Top Header -->
+                <header class="bg-white/90 backdrop-blur-md border-b border-slate-100 md:border-none md:bg-transparent p-4 md:px-8 md:pt-8 md:pb-4 flex justify-between items-center z-30">
+                    <div class="flex items-center gap-3 md:hidden">
+                        <div class="w-8 h-8 bg-violet-100 rounded-lg flex items-center justify-center text-violet-600"><i class="fa-solid fa-layer-group"></i></div>
+                        <span class="font-extrabold text-sm text-slate-800">Academy</span>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center bg-white rounded-2xl px-4 py-2.5 shadow-[0_2px_10px_rgb(0,0,0,0.02)] border border-slate-100 w-96">
+                        <i class="fa-solid fa-search text-slate-400 mr-3"></i>
+                        <input type="text" placeholder="Search courses, documents..." class="bg-transparent border-none outline-none text-sm w-full text-slate-600">
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <button class="hidden md:flex w-10 h-10 bg-white rounded-full items-center justify-center text-slate-400 shadow-[0_2px_10px_rgb(0,0,0,0.02)] hover:text-violet-600 transition-colors relative">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </button>
+                        
+                        <!-- Logout Khusus Mobile -->
+                        <button onclick="logout()" class="md:hidden text-red-500 bg-red-50 w-8 h-8 rounded-full shadow-sm flex items-center justify-center">
+                            <i class="fa-solid fa-power-off text-[11px]"></i>
+                        </button>
+                    </div>
+                </header>
+                
+                <!-- Dynamic View Content -->
+                <div class="flex-1 px-4 pb-24 md:px-8 md:pb-8 overflow-y-auto" id="content-area">
+                    <!-- Konten disuntikkan oleh JS -->
+                </div>
+
+                <!-- Bottom Navigation Bar (Mobile) -->
+                <nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-slate-200 z-40 flex flex-row items-center gap-1 px-2 py-2 overflow-x-auto hide-scrollbar shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+                </nav>
+            </main>
+        </div>
+
+        <!-- LAYER: GLOBAL ADD MODAL -->
+        <div id="add-modal" class="fixed inset-0 bg-slate-900/40 z-[200] hidden items-center justify-center p-4 backdrop-blur-sm">
+            <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden flex flex-col max-h-[90vh]">
+                <div class="p-6 border-b border-slate-50 flex justify-between items-center bg-white z-10 relative">
+                    <h3 class="font-extrabold text-lg text-slate-800" id="modal-title">Tambah Data</h3>
+                    <button onclick="closeAddModal()" class="text-slate-400 hover:bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <form id="add-form" class="p-6 space-y-5 overflow-y-auto">
+                    <input type="hidden" id="form-sheet">
+                    <input type="hidden" id="form-parent-id"> 
+                    
+                    <div>
+                        <label id="label-form-nama" class="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wide">NAMA / JUDUL</label>
+                        <input type="text" id="form-nama" required class="w-full px-4 py-3.5 bg-slate-50 border border-slate-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500 focus:bg-white transition-colors">
+                    </div>
+                    
+                    <div id="form-deskripsi-wrapper">
+                        <label id="label-form-deskripsi" class="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wide">KETERANGAN / JAWABAN</label>
+                        <textarea id="form-deskripsi" rows="3" class="w-full px-4 py-3.5 bg-slate-50 border border-slate-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500 focus:bg-white transition-colors"></textarea>
+                    </div>
+
+                    <div id="form-thumbnail-wrapper">
+                        <label class="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wide">URL THUMBNAIL (GAMBAR)</label>
+                        <input type="url" id="form-thumbnail" required placeholder="https://..." class="w-full px-4 py-3.5 bg-slate-50 border border-slate-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500 focus:bg-white transition-colors">
+                    </div>
+                    
+                    <div id="form-link-wrapper">
+                        <label id="label-form-link" class="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wide">LINK TUJUAN</label>
+                        <input type="url" id="form-link" placeholder="https://..." class="w-full px-4 py-3.5 bg-slate-50 border border-slate-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500 focus:bg-white transition-colors">
+                    </div>
+                    
+                    <div id="extra-marketplace-fields" class="hidden space-y-5 border-t border-slate-100 pt-5 mt-2">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wide">HARGA (Rp) ATAU "GRATIS"</label>
+                            <input type="text" id="form-harga" placeholder="Contoh: 150000 atau Gratis" class="w-full px-4 py-3.5 bg-violet-50/50 border border-violet-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wide">NOMOR WA (TANPA 0/+, GUNAKAN 62)</label>
+                            <input type="number" id="form-wa" placeholder="Contoh: 628123456789" class="w-full px-4 py-3.5 bg-violet-50/50 border border-violet-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500">
+                        </div>
+                    </div>
+
+                    <div id="extra-live-fields" class="hidden space-y-5 border-t border-slate-100 pt-5 mt-2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wide">TANGGAL LIVE</label>
+                                <input type="date" id="form-tanggal" class="w-full px-4 py-3.5 bg-violet-50/50 border border-violet-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wide">JAM (WIB)</label>
+                                <input type="time" id="form-jam" class="w-full px-4 py-3.5 bg-violet-50/50 border border-violet-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wide">PLATFORM</label>
+                            <select id="form-platform" onchange="toggleCustomPlatform()" class="w-full px-4 py-3.5 bg-violet-50/50 border border-violet-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500">
+                                <option value="Zoom">Zoom Meeting</option>
+                                <option value="Google Meet">Google Meet</option>
+                                <option value="YouTube Live">YouTube Live</option>
+                                <option value="TikTok">TikTok Live</option>
+                                <option value="Facebook">Facebook Live</option>
+                                <option value="Lainnya">Lainnya (Isi Sendiri)</option>
+                            </select>
+                            <input type="text" id="form-platform-custom" placeholder="Masukkan nama platform" class="hidden mt-3 w-full px-4 py-3.5 bg-violet-50/50 border border-violet-100 rounded-xl text-sm focus:ring-2 focus:ring-violet-500">
+                        </div>
+                    </div>
+
+                    <div class="pt-5 flex justify-end gap-3 sticky bottom-0 bg-white border-t mt-4 border-slate-50">
+                        <button type="button" onclick="closeAddModal()" class="px-6 py-3 text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-xl font-bold text-sm transition-colors">Batal</button>
+                        <button type="submit" class="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white rounded-xl font-bold text-sm shadow-[0_4px_12px_rgba(124,58,237,0.2)] transition-colors">Simpan Data</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const IS_PREVIEW = false; 
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbxD1UVHdx5OrepHfKqn779US9r_UqoTguGtADuNJec24PMYdUgAfJWCR4yvuxE4GR3Ktg/exec";
+
+        let currentUser = null;
+        let currentMenu = 'dashboard';
+        let currentActiveTopik = null; 
+
+        const dummyDB = {
+            users: [
+                {id: 'U1', nama: 'Administrator', username: 'admin', role: 'admin'},
+                {id: 'U2', nama: 'Peserta Uji', username: 'peserta', role: 'peserta'}
+            ],
+            topik: [{id: 'TOP-1', nama: 'Web Development', deskripsi: 'Dasar-dasar pembuatan web HTML & CSS.', thumbnail: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80'}],
+            materi: [{id: 'MAT-1', id_topik: 'TOP-1', nama: 'Struktur HTML', deskripsi: 'Mengenal tag dasar HTML.', thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&q=80', link: 'https://docs.google.com/'}],
+            tools: [], template: [], marketplace: [], live: [], faq: []
+        };
+
+        if(!IS_PREVIEW) document.getElementById('preview-info').style.display = 'none';
+
+        let appCache = {};
+
+        async function apiCall(action, payload = {}) {
+            // INJEKSI SECURITY TOKEN: Semua request (kecuali login) WAJIB mengirimkan token.
+            if (currentUser && action !== 'login') {
+                payload.username = currentUser.username;
+                payload.token = currentUser.token;
+            }
+
+            const cacheKey = action + '_' + (payload.sheetName || '');
+            if (!IS_PREVIEW && action.includes('get') && appCache[cacheKey]) return appCache[cacheKey];
+
+            if (IS_PREVIEW) {
+                await new Promise(r => setTimeout(r, 100)); 
+                const mockData = mockApi(action, payload);
+                
+                // Cek Validitas Token di Mode Preview
+                if (mockData.status === 'error' && mockData.message === 'Unauthorized') {
+                    handleUnauthorized(); return mockData;
+                }
+
+                if(action.includes('get')) appCache[cacheKey] = mockData;
+                if(action === 'addData' || action === 'deleteData') appCache = {};
+                return mockData;
+            } else {
+                try {
+                    const response = await fetch(GAS_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                        body: JSON.stringify({ action: action, payload: payload })
+                    });
+                    const data = await response.json();
+                    
+                    // ANTI-BYPASS: Cek apabila Backend menolak akses Token
+                    if (data.status === 'error' && data.message === 'Unauthorized') {
+                        handleUnauthorized(); return data;
+                    }
+
+                    if (data.status === 'success' && action.includes('get')) appCache[cacheKey] = data;
+                    if (action === 'addData' || action === 'deleteData') appCache = {};
+                    return data;
+                } catch (err) {
+                    return { status: 'error', message: 'Koneksi ke database gagal. Pastikan URL GAS benar.' };
+                }
+            }
+        }
+
+        // Penanganan ketika terdeteksi Bypass atau Token usang
+        function handleUnauthorized() {
+            hideLoader();
+            alert("Akses Ditolak! Sesi Anda tidak valid atau telah kedaluwarsa. Sistem akan mengeluarkan Anda untuk keamanan.");
+            logout();
+        }
+
+        function mockApi(action, payload) {
+            // Simulasi Anti-Bypass di Frontend untuk Mode Preview
+            if(action !== 'login' && (!payload.token || payload.token !== 'secure_mock_token_' + payload.username)) {
+                return {status: 'error', message: 'Unauthorized'};
+            }
+
+            switch(action) {
+                case 'login':
+                    if(payload.username === 'admin' && payload.password === 'edudigital') return {status: 'success', token: 'secure_mock_token_admin', user: dummyDB.users[0]};
+                    if(payload.username === 'peserta' && payload.password === 'edudigital') return {status: 'success', token: 'secure_mock_token_peserta', user: dummyDB.users[1]};
+                    return {status: 'error', message: 'Username/Password salah'};
+                case 'getDashboardStats': return {status: 'success', data: { materi: dummyDB.materi.length, tools: dummyDB.tools.length, template: dummyDB.template.length, users: dummyDB.users.length, marketplace: dummyDB.marketplace.length, live: dummyDB.live.length, faq: dummyDB.faq.length }};
+                case 'getRecentUpdates': return {status: 'success', data: [{typeLabel: 'Sub Topik', icon: 'fa-folder', color: 'text-violet-600 bg-violet-50', nama: 'Web Dev'}]};
+                case 'getData': return {status: 'success', data: dummyDB[payload.sheetName] || []};
+                case 'addData': if(!dummyDB[payload.sheetName]) dummyDB[payload.sheetName] = []; dummyDB[payload.sheetName].push(payload.data); return {status: 'success'};
+                case 'deleteData': dummyDB[payload.sheetName] = dummyDB[payload.sheetName].filter(item => item[payload.idCol] !== payload.idVal); return {status: 'success'};
+                default: return {status: 'error'};
+            }
+        }
+
+        function showLoader(text = "Memproses...") { document.getElementById('loader-text').innerText = text; document.getElementById('global-loader').style.display = 'flex'; }
+        function hideLoader() { document.getElementById('global-loader').style.display = 'none'; }
+        function showAlert(msg) { alert(msg); }
+
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const alertBox = document.getElementById('login-alert');
+            showLoader("Otentikasi Sistem..."); alertBox.classList.add('hidden');
+            const res = await apiCall('login', {username: document.getElementById('username').value, password: document.getElementById('password').value});
+            hideLoader();
+            
+            if(res.status === 'success') {
+                currentUser = res.user; 
+                // SIMPAN TOKEN KEAMANAN DI SESSION
+                currentUser.token = res.token; 
+                localStorage.setItem('lmsUserSession', JSON.stringify(currentUser)); 
+                initApp();
+            } else { alertBox.innerText = res.message; alertBox.classList.remove('hidden'); }
+        });
+
+        function logout() {
+            currentUser = null; currentActiveTopik = null; localStorage.removeItem('lmsUserSession');
+            document.getElementById('login-screen').classList.remove('hidden'); document.getElementById('main-layout').classList.add('hidden');
+            document.getElementById('login-form').reset();
+        }
+
+        function initApp() {
+            document.getElementById('login-screen').classList.add('hidden'); document.getElementById('main-layout').classList.remove('hidden');
+            document.getElementById('user-display-name').innerText = currentUser.nama; document.getElementById('user-display-role').innerText = currentUser.role;
+            buildMenu(); loadView('dashboard');
+        }
+
+        function buildMenu() {
+            const menus = [
+                { id: 'dashboard', icon: 'fa-house', label: 'Home', roles: ['admin', 'peserta'] },
+                { id: 'materi', icon: 'fa-book-open-reader', label: 'Courses', roles: ['admin', 'peserta'] },
+                { id: 'live', icon: 'fa-video', label: 'Live', roles: ['admin', 'peserta'] },
+                { id: 'tools', icon: 'fa-screwdriver-wrench', label: 'Tools', roles: ['admin', 'peserta'] },
+                { id: 'template', icon: 'fa-layer-group', label: 'Templates', roles: ['admin', 'peserta'] },
+                { id: 'marketplace', icon: 'fa-store', label: 'Market', roles: ['admin', 'peserta'] },
+                { id: 'faq', icon: 'fa-circle-question', label: 'FAQ', roles: ['admin', 'peserta'] }
+            ];
+
+            let menuHTML = ''; let mobileNavHTML = '';
+            menus.forEach(m => {
+                if(m.roles.includes(currentUser.role)) {
+                    menuHTML += `<a href="#" onclick="loadView('${m.id}')" id="menu-${m.id}" class="flex items-center gap-4 px-5 py-3.5 rounded-[1.2rem] text-slate-500 font-bold hover:bg-violet-50 hover:text-violet-600 transition-all mb-1"><i class="fa-solid ${m.icon} w-5 text-center text-lg"></i><span class="text-[14px]">${m.label}</span></a>`;
+                    mobileNavHTML += `<a href="#" onclick="loadView('${m.id}')" id="mobile-menu-${m.id}" class="flex flex-col items-center justify-center min-w-[70px] flex-shrink-0 py-2 text-slate-400 hover:text-violet-600 transition-colors gap-1"><i class="fa-solid ${m.icon} text-[18px]"></i><span class="text-[10px] font-bold truncate w-full text-center">${m.label}</span></a>`;
+                }
+            });
+            document.getElementById('sidebar-menu').innerHTML = menuHTML; document.getElementById('mobile-bottom-nav').innerHTML = mobileNavHTML;
+        }
+
+        function setActiveMenu(id) {
+            document.querySelectorAll('[id^="menu-"]').forEach(el => { el.classList.remove('bg-violet-600', 'text-white', 'shadow-md', 'shadow-violet-200'); el.classList.add('text-slate-500', 'hover:bg-violet-50', 'hover:text-violet-600'); });
+            const dMenu = document.getElementById(`menu-${id}`); if(dMenu){ dMenu.classList.remove('text-slate-500', 'hover:bg-violet-50', 'hover:text-violet-600'); dMenu.classList.add('bg-violet-600', 'text-white', 'shadow-md', 'shadow-violet-200'); }
+            document.querySelectorAll('[id^="mobile-menu-"]').forEach(el => { el.classList.remove('text-violet-600'); el.classList.add('text-slate-400'); });
+            const mMenu = document.getElementById(`mobile-menu-${id}`); if(mMenu) { mMenu.classList.remove('text-slate-400'); mMenu.classList.add('text-violet-600'); }
+        }
+
+        async function loadView(viewId) {
+            currentMenu = viewId; currentActiveTopik = null; setActiveMenu(viewId);
+            const content = document.getElementById('content-area'); content.innerHTML = ''; 
+
+            showLoader();
+            if(viewId === 'dashboard') await renderDashboard(content);
+            if(viewId === 'materi') await renderTopikList(content);
+            if(viewId === 'tools') await renderGenericMenu(content, 'tools', currentUser.role === 'admin' ? 'Manajemen Tools' : 'Resources', 'emerald');
+            if(viewId === 'template') await renderGenericMenu(content, 'template', currentUser.role === 'admin' ? 'Kelola Template' : 'Templates', 'purple');
+            if(viewId === 'marketplace') await renderMarketplace(content);
+            if(viewId === 'live') await renderLive(content);
+            if(viewId === 'faq') await renderFAQ(content);
+            hideLoader();
+        }
+
+        // --- DASHBOARD RENDERER ---
+        function cardUI(title, count, icon, colorBase) {
+            const colorMap = { 'violet': 'bg-violet-100 text-violet-600', 'emerald': 'bg-emerald-100 text-emerald-600', 'purple': 'bg-purple-100 text-purple-600', 'amber': 'bg-amber-100 text-amber-600', 'orange': 'bg-orange-100 text-orange-600', 'blue': 'bg-blue-100 text-blue-600' };
+            const style = colorMap[colorBase] || 'bg-slate-100 text-slate-600';
+            return `<div class="bg-white rounded-[24px] p-6 flex flex-col items-start gap-4 border border-slate-100/50 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-300"><div class="${style} w-14 h-14 rounded-[16px] flex items-center justify-center text-2xl"><i class="fa-solid ${icon}"></i></div><div><h3 class="text-3xl font-extrabold text-slate-800 leading-none mb-1">${count}</h3><p class="text-xs text-slate-500 font-bold uppercase tracking-wide">${title}</p></div></div>`;
+        }
+
+        async function renderDashboard(container) {
+            const [statsRes, updatesRes] = await Promise.all([ apiCall('getDashboardStats'), apiCall('getRecentUpdates') ]);
+            
+            // Abort render if unauthorized (API returns error)
+            if (statsRes.status === 'error' || updatesRes.status === 'error') return;
+
+            const stats = statsRes.data || { materi:0, tools:0, template:0, users:0, marketplace:0, live:0, faq:0 };
+
+            let statsCardsHTML = `${cardUI('Courses', stats.materi, 'fa-book-open', 'blue')} ${cardUI('Schedules', stats.live, 'fa-calendar-day', 'orange')} ${cardUI('Marketplace', stats.marketplace, 'fa-store', 'emerald')}`;
+            let gridClass = "grid grid-cols-2 md:grid-cols-3 gap-5 lg:gap-6";
+            if (currentUser.role === 'admin') { statsCardsHTML += cardUI('Users', stats.users, 'fa-users', 'amber'); gridClass = "grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6"; }
+
+            let updatesList = '';
+            if(updatesRes.status === 'success' && updatesRes.data.length > 0) {
+                updatesRes.data.forEach(up => { updatesList += `<div class="flex items-center gap-4 py-4 border-b border-slate-100 last:border-0 hover:bg-slate-50/50 rounded-xl px-2 transition-colors"><div class="w-12 h-12 rounded-2xl flex items-center justify-center ${up.color} shrink-0 shadow-sm"><i class="fa-solid ${up.icon}"></i></div><div class="flex-1"><p class="text-[15px] font-extrabold text-slate-800 line-clamp-1">${up.nama}</p><p class="text-[12px] text-slate-500 font-bold">${up.typeLabel}</p></div><i class="fa-solid fa-chevron-right text-slate-300 text-sm"></i></div>`; });
+            } else { updatesList = `<p class="text-sm text-slate-400 text-center py-6">No recent activities.</p>`; }
+
+            let welcome = `
+                <div class="bg-[#2a2c7c] rounded-[2rem] p-8 lg:p-10 mb-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-[0_12px_40px_rgba(42,44,124,0.25)] relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-48 h-48 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
+                    <div class="relative z-10 w-full md:w-auto">
+                        <div class="inline-block bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] font-extrabold text-indigo-100 uppercase tracking-widest mb-4 border border-white/10">Welcome to Your Dashboard</div>
+                        <h2 class="text-3xl lg:text-4xl font-black text-white mb-2 tracking-tight">Halo, ${currentUser.nama}! 👋</h2>
+                        <p class="text-indigo-200 text-sm font-medium max-w-md leading-relaxed">Kelola pembelajaran, jadwal, dan sumber daya digital Anda di satu tempat yang terintegrasi.</p>
+                    </div>
+                    <div class="hidden md:flex shrink-0"><div class="w-24 h-24 bg-white/10 rounded-3xl flex items-center justify-center backdrop-blur-md border border-white/10 transform rotate-6"><i class="fa-solid fa-rocket text-4xl text-amber-300"></i></div></div>
+                </div>`;
+
+            container.innerHTML = `${welcome}<div class="mb-8"><h3 class="text-xl font-extrabold text-slate-800 mb-5">Overview Stats</h3><div class="${gridClass}">${statsCardsHTML}</div></div><div class="w-full"><div class="bg-white rounded-[2rem] border border-slate-100 p-6 shadow-[0_4px_20px_rgb(0,0,0,0.03)] w-full"><h3 class="text-lg font-extrabold text-slate-800 mb-2">Recent Activities</h3><div class="space-y-1">${updatesList}</div></div></div>`;
+        }
+
+        // --- HIERARKI MATERI ---
+        async function renderTopikList(container) {
+            container.innerHTML = `<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4"><div><h2 class="text-2xl font-extrabold text-slate-800">${currentUser.role === 'admin' ? 'Course Planning' : 'My Courses'}</h2></div>${currentUser.role === 'admin' ? `<button onclick="openAddModal('topik', 'Sub Topik')" class="bg-[#2a2c7c] hover:bg-indigo-800 text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg transition-all shrink-0"><i class="fa-solid fa-folder-plus mr-2"></i>Tambah Folder</button>` : ''}</div><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="topik-grid"><p class="text-slate-400 text-sm col-span-full">Memuat data...</p></div>`;
+            const res = await apiCall('getData', {sheetName: 'topik'}); if (res.status === 'error') return;
+            const grid = document.getElementById('topik-grid');
+            if(res.status === 'success' && res.data.length > 0) {
+                grid.innerHTML = '';
+                res.data.forEach(item => {
+                    grid.innerHTML += `<div class="bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-3 group cursor-pointer" onclick="openMateriFolder('${item.id}', '${item.nama.replace(/'/g, "\\'")}')"><div class="h-40 w-full overflow-hidden relative rounded-[1.5rem] bg-indigo-50 flex items-center justify-center"><img src="${item.thumbnail || ''}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'"><div class="absolute inset-0 bg-gradient-to-t from-[#2a2c7c]/80 to-transparent"></div><div class="absolute bottom-4 left-4 flex flex-col text-white"><span class="text-xs font-bold text-indigo-200 mb-1"><i class="fa-solid fa-folder-open"></i> FOLDER</span><span class="text-lg font-black leading-tight pr-2">${item.nama}</span></div></div>${currentUser.role === 'admin' ? `<div class="absolute top-5 right-5 z-10" onclick="event.stopPropagation()"><button onclick="deleteRow('topik', 'id', '${item.id}')" class="bg-white/90 backdrop-blur text-red-500 hover:bg-red-500 hover:text-white w-9 h-9 rounded-xl shadow flex items-center justify-center transition-colors"><i class="fa-solid fa-trash-can text-sm"></i></button></div>` : ''}</div>`;
+                });
+            } else { grid.innerHTML = `<div class="col-span-full py-16 flex flex-col items-center text-center bg-white rounded-[2rem]"><div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-300 text-2xl mb-3"><i class="fa-solid fa-folder-open"></i></div><p class="text-slate-500 text-sm font-bold">Belum ada folder Sub Topik.</p></div>`; }
+        }
+
+        async function openMateriFolder(topikId, topikNama) {
+            currentActiveTopik = { id: topikId, nama: topikNama };
+            const container = document.getElementById('content-area');
+            container.innerHTML = `<div class="mb-5"><button onclick="loadView('materi')" class="text-slate-500 hover:text-violet-600 font-bold text-sm flex items-center gap-2 transition-colors bg-white px-4 py-2.5 rounded-xl shadow-[0_2px_10px_rgb(0,0,0,0.02)] border border-slate-100 max-w-fit"><i class="fa-solid fa-arrow-left"></i> Back to Folders</button></div><div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4"><div><h2 class="text-2xl font-extrabold text-slate-800">${topikNama}</h2></div>${currentUser.role === 'admin' ? `<button onclick="openAddModal('materi', 'Materi', '${topikId}')" class="bg-violet-600 hover:bg-violet-700 text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg shadow-violet-200 transition-all shrink-0"><i class="fa-solid fa-plus mr-2"></i>Tambah Materi</button>` : ''}</div><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="materi-list-grid"><p class="text-slate-400 text-sm col-span-full">Memuat materi...</p></div>`;
+            showLoader(); const res = await apiCall('getData', {sheetName: 'materi'}); hideLoader(); if(res.status === 'error') return;
+            const grid = document.getElementById('materi-list-grid');
+            if(res.status === 'success') {
+                const filteredData = res.data.filter(item => item.id_topik === topikId);
+                if (filteredData.length > 0) {
+                    grid.innerHTML = '';
+                    filteredData.forEach(item => { grid.innerHTML += `<div class="bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-xl transition-all duration-300 flex flex-col group p-3 relative"><div class="h-36 w-full overflow-hidden relative rounded-[1.5rem] bg-slate-50"><img src="${item.thumbnail}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x200?text=Error'"></div><div class="p-3 flex-1 flex flex-col"><h3 class="font-extrabold text-[16px] text-slate-800 mb-1 line-clamp-1 group-hover:text-violet-600 transition-colors">${item.nama}</h3><p class="text-[12px] text-slate-500 mb-5 line-clamp-2 font-medium">${item.deskripsi}</p><div class="mt-auto flex justify-between items-center gap-2"><a href="${item.link}" target="_blank" class="flex-1 text-center bg-slate-50 hover:bg-[#2a2c7c] text-slate-700 hover:text-white px-3 py-2.5 rounded-xl text-xs font-extrabold transition-colors">Buka Materi</a>${currentUser.role === 'admin' ? `<button onclick="deleteRow('materi', 'id', '${item.id}')" class="text-slate-400 bg-white border border-slate-100 hover:bg-red-50 hover:text-red-500 hover:border-red-100 w-10 h-10 flex items-center justify-center rounded-xl transition-colors shrink-0"><i class="fa-solid fa-trash-can text-sm"></i></button>` : ''}</div></div></div>`; });
+                } else { grid.innerHTML = `<div class="col-span-full py-10 flex flex-col items-center text-center bg-white rounded-[2rem] border border-dashed border-slate-200"><p class="text-slate-500 text-sm font-bold">Belum ada materi di dalam topik ini.</p></div>`; }
+            }
+        }
+
+        // --- GENERIC RENDERER (Tools, Template) ---
+        async function renderGenericMenu(container, sheetName, title, themeColor) {
+            container.innerHTML = `<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4"><h2 class="text-2xl font-extrabold text-slate-800">${title}</h2>${currentUser.role === 'admin' ? `<button onclick="openAddModal('${sheetName}', '${title}')" class="bg-[#2a2c7c] hover:bg-indigo-800 text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg transition-all shrink-0"><i class="fa-solid fa-plus mr-2"></i>Tambah Baru</button>` : ''}</div><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5" id="${sheetName}-grid"><p class="text-slate-400 text-sm col-span-full">Memuat data...</p></div>`;
+            const res = await apiCall('getData', {sheetName: sheetName}); if(res.status==='error') return; const grid = document.getElementById(`${sheetName}-grid`);
+            if(res.status === 'success' && res.data.length > 0) {
+                grid.innerHTML = '';
+                res.data.forEach(item => { grid.innerHTML += `<div class="bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-xl transition-all duration-300 flex flex-col group p-3"><div class="h-32 w-full overflow-hidden relative rounded-[1.5rem] bg-slate-50"><img src="${item.thumbnail}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x200?text=Error'"></div><div class="p-3 flex-1 flex flex-col"><h3 class="font-extrabold text-[15px] text-slate-800 mb-1 line-clamp-1">${item.nama}</h3><p class="text-[12px] text-slate-500 mb-4 line-clamp-2 font-medium">${item.deskripsi}</p><div class="mt-auto flex gap-2"><a href="${item.link}" target="_blank" class="flex-1 text-center bg-slate-50 hover:bg-[#2a2c7c] text-slate-700 hover:text-white px-3 py-2.5 rounded-xl text-xs font-bold transition-colors">Akses <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>${currentUser.role === 'admin' ? `<button onclick="deleteRow('${sheetName}', 'id', '${item.id}')" class="text-slate-400 bg-white border border-slate-100 hover:bg-red-50 hover:text-red-500 w-10 h-10 rounded-xl transition-colors"><i class="fa-solid fa-trash-can"></i></button>` : ''}</div></div></div>`; });
+            } else { grid.innerHTML = `<div class="col-span-full py-16 flex flex-col items-center bg-white rounded-[2rem]"><p class="text-slate-500 text-sm font-bold">Belum ada data ditambahkan.</p></div>`; }
+        }
+
+        // --- LIVE RENDERER ---
+        function formatDisplayDate(val) { if(!val) return '-'; let str = String(val); if(str.includes('T') && str.includes('-')) { const d = new Date(str); if(!isNaN(d)) return d.toLocaleDateString('id-ID', {day: '2-digit', month: 'short', year: 'numeric'}); } return str; }
+        function formatDisplayTime(val) { if(!val) return '-'; let str = String(val).replace(/ WIB| WITA| WIT/g, ''); if(str.includes('T') && str.includes('-')) { const d = new Date(str); if(!isNaN(d)) return d.toLocaleTimeString('id-ID', {hour: '2-digit', minute: '2-digit'}).replace('.', ':'); } if(str.length >= 5 && str.includes(':')) return str.substring(0, 5); return str; }
+
+        async function renderLive(container) {
+            container.innerHTML = `<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4 bg-orange-500 rounded-[2rem] p-8 shadow-lg shadow-orange-200"><div><h2 class="text-2xl font-black text-white mb-1">Live Schedules</h2><p class="text-orange-100 text-sm font-medium">Ikuti pertemuan interaktif secara virtual.</p></div>${currentUser.role === 'admin' ? `<button onclick="openAddModal('live', 'Jadwal Live')" class="bg-white text-orange-600 px-6 py-3 rounded-2xl text-sm font-bold shadow-md hover:bg-slate-50 transition-colors"><i class="fa-solid fa-plus mr-2"></i>Buat Jadwal Baru</button>` : ''}</div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="live-grid"><p class="text-slate-400 text-sm col-span-full">Memuat jadwal...</p></div>`;
+            const res = await apiCall('getData', {sheetName: 'live'}); if (res.status === 'error') return; const grid = document.getElementById('live-grid');
+            if(res.status === 'success' && res.data.length > 0) {
+                grid.innerHTML = '';
+                res.data.forEach(item => {
+                    const platLower = String(item.platform).toLowerCase(); let pIcon = 'fa-link';
+                    if (platLower.includes('zoom')) pIcon = 'fa-video'; else if (platLower.includes('meet')) pIcon = 'fa-google'; else if (platLower.includes('youtube')) pIcon = 'fa-youtube'; else if (platLower.includes('tiktok')) pIcon = 'fa-tiktok'; else if (platLower.includes('facebook')) pIcon = 'fa-facebook';
+                    grid.innerHTML += `<div class="bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-xl transition-all duration-300 flex flex-col p-3 group"><div class="h-44 w-full overflow-hidden relative rounded-[1.5rem] bg-slate-50"><img src="${item.thumbnail}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x200?text=Live'"><div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-black text-orange-600 shadow-sm"><i class="fa-brands ${pIcon} mr-1"></i> ${item.platform}</div></div><div class="p-4 flex-1 flex flex-col"><h3 class="font-extrabold text-lg text-slate-800 mb-4 line-clamp-2 leading-tight">${item.nama}</h3><div class="flex items-center gap-3 text-xs text-slate-600 mb-5 bg-slate-50 p-3.5 rounded-2xl"><div class="flex items-center gap-2"><div class="w-6 h-6 bg-white rounded-md flex items-center justify-center text-orange-500 shadow-sm"><i class="fa-regular fa-calendar"></i></div><span class="font-bold">${formatDisplayDate(item.tanggal)}</span></div><div class="flex items-center gap-2"><div class="w-6 h-6 bg-white rounded-md flex items-center justify-center text-blue-500 shadow-sm"><i class="fa-regular fa-clock"></i></div><span class="font-bold">${formatDisplayTime(item.jam)}</span></div></div><div class="mt-auto flex gap-2"><a href="${item.link}" target="_blank" class="flex-1 text-center bg-[#2a2c7c] text-white px-4 py-3 rounded-xl text-sm font-bold shadow-md hover:bg-indigo-800 transition-colors">Join Session</a>${currentUser.role === 'admin' ? `<button onclick="deleteRow('live', 'id', '${item.id}')" class="text-slate-400 bg-white border border-slate-100 hover:bg-red-50 hover:text-red-500 w-12 rounded-xl transition-colors"><i class="fa-solid fa-trash-can"></i></button>` : ''}</div></div></div>`;
+                });
+            } else { grid.innerHTML = `<div class="col-span-full py-16 text-center bg-white rounded-[2rem]"><p class="text-slate-500 font-bold">Belum ada jadwal live tersedia.</p></div>`; }
+        }
+
+        // --- MARKETPLACE RENDERER ---
+        async function renderMarketplace(container) {
+            container.innerHTML = `<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4 bg-[#10b981] rounded-[2rem] p-8 shadow-lg shadow-emerald-200"><div><h2 class="text-2xl font-black text-white mb-1">Marketplace</h2><p class="text-emerald-100 text-sm font-medium">Temukan dan bagikan karya aplikasi digital.</p></div><button onclick="openAddModal('marketplace', 'Produk Aplikasi')" class="bg-white text-emerald-600 px-6 py-3 rounded-2xl text-sm font-bold shadow-md hover:bg-slate-50 transition-all"><i class="fa-solid fa-cloud-arrow-up mr-2"></i>Jual Karya</button></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="marketplace-grid"><p class="text-slate-400 text-sm col-span-full">Memuat produk...</p></div>`;
+            const res = await apiCall('getData', {sheetName: 'marketplace'}); if (res.status === 'error') return; const grid = document.getElementById('marketplace-grid');
+            if(res.status === 'success' && res.data.length > 0) {
+                grid.innerHTML = '';
+                res.data.forEach(item => {
+                    let hargaStr = item.harga; let isGratis = (!hargaStr || hargaStr == 0 || String(hargaStr).toLowerCase() === 'gratis');
+                    if(!isGratis && !isNaN(hargaStr)) hargaStr = 'Rp ' + parseInt(hargaStr).toLocaleString('id-ID'); else if (isGratis) hargaStr = 'Gratis';
+                    const waLink = `https://wa.me/${item.wa}?text=${encodeURIComponent('Halo kak, saya tertarik dengan aplikasi "'+item.nama+'"')}`;
+                    const canDelete = (currentUser.role === 'admin' || currentUser.username === item.creator);
+                    grid.innerHTML += `<div class="bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-xl transition flex flex-col p-3 group"><div class="h-44 w-full overflow-hidden relative rounded-[1.5rem] bg-slate-50"><img src="${item.thumbnail}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x200?text=Image'"><div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-black text-emerald-600 shadow-sm">${hargaStr}</div></div><div class="p-3 flex-1 flex flex-col"><h3 class="font-extrabold text-[16px] text-slate-800 mb-1 line-clamp-1">${item.nama}</h3><p class="text-[12px] text-slate-500 mb-5 line-clamp-2 font-medium">${item.deskripsi}</p><div class="mt-auto flex flex-col gap-2"><div class="flex gap-2"><a href="${item.link}" target="_blank" class="flex-1 text-center bg-slate-50 hover:bg-slate-100 text-slate-700 px-3 py-2.5 rounded-xl text-[12px] font-bold transition-colors"><i class="fa-solid fa-desktop mr-1"></i> Demo</a><a href="${waLink}" target="_blank" class="flex-[1.5] text-center bg-[#10b981] hover:bg-emerald-600 text-white px-3 py-2.5 rounded-xl text-[12px] font-bold transition-colors shadow-md shadow-emerald-200"><i class="fa-brands fa-whatsapp mr-1"></i> Pesan</a></div>${canDelete ? `<button onclick="deleteRow('marketplace', 'id', '${item.id}')" class="text-slate-400 bg-white border border-slate-100 hover:bg-red-50 hover:text-red-500 hover:border-red-100 py-2 text-[11px] font-bold mt-1 transition-colors rounded-xl"><i class="fa-solid fa-trash-can mr-1"></i> Hapus Produk</button>` : ''}</div></div></div>`;
+                });
+            } else { grid.innerHTML = `<div class="col-span-full py-16 text-center bg-white rounded-[2rem]"><p class="text-slate-500 font-bold">Belum ada produk di Marketplace.</p></div>`; }
+        }
+
+        // --- FAQ RENDERER ---
+        async function renderFAQ(container) {
+            container.innerHTML = `<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4"><div><h2 class="text-2xl font-extrabold text-slate-800">Frequently Asked Questions</h2><p class="text-sm text-slate-500 font-medium">Bantuan dan jawaban atas pertanyaan umum.</p></div>${currentUser.role === 'admin' ? `<button onclick="openAddModal('faq', 'FAQ')" class="bg-[#2a2c7c] hover:bg-indigo-800 text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-lg transition-all shrink-0"><i class="fa-solid fa-plus mr-2"></i>Tambah FAQ</button>` : ''}</div><div class="bg-white rounded-[2rem] p-6 lg:p-10 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100"><div id="faq-list" class="space-y-4"><p class="text-slate-400 text-sm">Memuat FAQ...</p></div></div>`;
+            const res = await apiCall('getData', {sheetName: 'faq'}); if (res.status === 'error') return; const list = document.getElementById('faq-list');
+            if(res.status === 'success' && res.data.length > 0) {
+                list.innerHTML = '';
+                res.data.forEach((item, index) => {
+                    list.innerHTML += `<details class="group border border-slate-100 bg-slate-50 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden"><summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-bold text-slate-800 hover:bg-slate-100 transition-colors"><span class="pr-6">${item.nama}</span><span class="transition duration-300 group-open:-rotate-180 text-violet-600 bg-violet-100 w-8 h-8 rounded-full flex items-center justify-center shrink-0"><i class="fa-solid fa-chevron-down text-sm"></i></span></summary><div class="px-6 pb-6 text-slate-600 text-[14px] leading-relaxed font-medium bg-white pt-2 border-t border-slate-50"><p>${item.deskripsi}</p>${currentUser.role === 'admin' ? `<div class="mt-4 pt-4 border-t border-slate-50 flex justify-end"><button onclick="deleteRow('faq', 'id', '${item.id}')" class="text-red-500 text-xs font-bold bg-red-50 hover:bg-red-500 hover:text-white px-3 py-1.5 rounded-lg transition-colors">Hapus Pertanyaan</button></div>` : ''}</div></details>`;
+                });
+            } else { list.innerHTML = `<div class="py-10 text-center"><p class="text-slate-500 font-bold">Belum ada pertanyaan FAQ.</p></div>`; }
+        }
+
+        async function deleteRow(sheetName, idCol, idVal) {
+            if(confirm('Yakin ingin menghapus data ini?')) {
+                showLoader('Menghapus data...'); const res = await apiCall('deleteData', {sheetName, idCol, idVal});
+                if(res.status === 'success') {
+                    if (sheetName === 'materi' && currentActiveTopik) openMateriFolder(currentActiveTopik.id, currentActiveTopik.nama);
+                    else if (sheetName === 'topik') loadView('materi'); else loadView(sheetName); 
+                } else { hideLoader(); showAlert('Gagal menghapus: ' + res.message); }
+            }
+        }
+
+        function openAddModal(sheetName, title, parentId = null) {
+            document.getElementById('form-sheet').value = sheetName; document.getElementById('form-parent-id').value = parentId || ''; document.getElementById('modal-title').innerText = "Tambah " + title; document.getElementById('add-form').reset();
+            const isTopik = (sheetName === 'topik'); const isMarket = (sheetName === 'marketplace'); const isLive = (sheetName === 'live'); const isFaq = (sheetName === 'faq');
+            
+            document.getElementById('form-thumbnail-wrapper').style.display = isFaq ? 'none' : 'block'; document.getElementById('form-thumbnail').required = !isFaq;
+            document.getElementById('form-link-wrapper').style.display = (isTopik || isFaq) ? 'none' : 'block'; document.getElementById('form-link').required = !(isTopik || isFaq);
+
+            const extraMarketFields = document.getElementById('extra-marketplace-fields');
+            if(isMarket) { extraMarketFields.classList.remove('hidden'); document.getElementById('form-harga').required = true; document.getElementById('form-wa').required = true; } 
+            else { extraMarketFields.classList.add('hidden'); document.getElementById('form-harga').required = false; document.getElementById('form-wa').required = false; }
+
+            const extraLiveFields = document.getElementById('extra-live-fields');
+            if(isLive) { extraLiveFields.classList.remove('hidden'); document.getElementById('form-tanggal').required = true; document.getElementById('form-jam').required = true; } 
+            else { extraLiveFields.classList.add('hidden'); document.getElementById('form-tanggal').required = false; document.getElementById('form-jam').required = false; }
+
+            document.getElementById('form-deskripsi-wrapper').style.display = isLive ? 'none' : 'block'; document.getElementById('form-deskripsi').required = !isLive && !isTopik; 
+            
+            if (isFaq) { document.getElementById('label-form-nama').innerText = 'PERTANYAAN'; document.getElementById('label-form-deskripsi').innerText = 'JAWABAN'; } 
+            else { document.getElementById('label-form-nama').innerText = 'NAMA / JUDUL'; document.getElementById('label-form-deskripsi').innerText = 'KETERANGAN SINGKAT'; }
+
+            if (isMarket) { document.getElementById('label-form-link').innerText = 'LINK DEMO / PREVIEW APLIKASI'; } else if (isLive) { document.getElementById('label-form-link').innerText = 'LINK RUANG MEETING (ZOOM/MEET)'; } else { document.getElementById('label-form-link').innerText = 'LINK TUJUAN MATERI / FILE'; }
+            
+            document.getElementById('form-platform-custom').classList.add('hidden'); document.getElementById('form-platform-custom').required = false;
+            document.getElementById('add-modal').style.display = 'flex';
+        }
+
+        function toggleCustomPlatform() {
+            const val = document.getElementById('form-platform').value; const customInput = document.getElementById('form-platform-custom');
+            if (val === 'Lainnya') { customInput.classList.remove('hidden'); customInput.required = true; } else { customInput.classList.add('hidden'); customInput.required = false; }
+        }
+
+        function closeAddModal() { document.getElementById('add-modal').style.display = 'none'; }
+
+        document.getElementById('add-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const sheetName = document.getElementById('form-sheet').value;
+            showLoader("Menyimpan data..."); closeAddModal();
+
+            const prefix = sheetName.substring(0, 3).toUpperCase();
+            const data = {
+                id: prefix + '-' + Date.now().toString().slice(-6),
+                nama: document.getElementById('form-nama').value,
+                deskripsi: document.getElementById('form-deskripsi').value,
+                thumbnail: document.getElementById('form-thumbnail').value || '-', link: document.getElementById('form-link').value || '-'
+            };
+
+            if(sheetName === 'materi') { data.id_topik = document.getElementById('form-parent-id').value; }
+            if(sheetName === 'marketplace') { data.harga = document.getElementById('form-harga').value; data.wa = document.getElementById('form-wa').value; data.creator = currentUser.username; }
+            if(sheetName === 'live') {
+                data.tanggal = document.getElementById('form-tanggal').value; data.jam = document.getElementById('form-jam').value;
+                let platformVal = document.getElementById('form-platform').value;
+                if(platformVal === 'Lainnya') platformVal = document.getElementById('form-platform-custom').value || 'Platform Custom';
+                data.platform = platformVal; data.creator = currentUser.username;
+            }
+
+            const res = await apiCall('addData', {sheetName: sheetName, data});
+            if(res.status === 'success') {
+                if (sheetName === 'materi' && currentActiveTopik) openMateriFolder(currentActiveTopik.id, currentActiveTopik.nama);
+                else if (sheetName === 'topik') loadView('materi'); else loadView(sheetName);
+            } else { hideLoader(); showAlert('Gagal menyimpan: ' + res.message); }
+        });
+
+        window.onload = () => { const savedSession = localStorage.getItem('lmsUserSession'); if(savedSession) { currentUser = JSON.parse(savedSession); initApp(); } };
+    </script>
+</body>
+</html>
+</div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1'>
+</div>
+<div class='post-footer-line post-footer-line-2'>
+</div>
+<div class='post-footer-line post-footer-line-3'>
+</div>
+</div>
+</div>
+</div>
+<section class='comments embed' data-num-comments='0' id='comments'>
+<a name='comments'></a>
+<h3 class='title'>Komentar</h3>
+<div id='Blog1_comments-block-wrapper'>
+</div>
+<div class='footer'>
+<div class='comment-form'>
+<a name='comment-form'></a>
+<h4 id='comment-post-message'>Posting Komentar</h4>
+<a href='https://www.blogger.com/comment/frame/3173387891674895264?pa=7602129351725913971&hl=id&saa=85391&origin=https://www.edudigital.id&skin=contempo' id='comment-editor-src'></a>
+<iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410px' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
+<script src='https://www.blogger.com/static/v1/jsbin/2830521187-comment_from_post_iframe.js' type='text/javascript'></script>
+<script type='text/javascript'>
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+    </script>
+</div>
+</div>
+</section>
+</article>
+</div>
+<div class='blog-feeds'>
+<div class='feed-links'>
+Langganan:
+<a class='feed-link' href='https://www.edudigital.id/feeds/posts/default' target='_blank' type='application/atom+xml'>Postingan (Atom)</a>
+</div>
+</div>
+</div></div>
+</div>
+<!-- Footer (Tampil di semua halaman) -->
+<footer class='bg-gray-50 py-12 border-t border-gray-100'>
+<div class='container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6'>
+<div class='flex items-center gap-2'>
+<div class='w-8 h-8 rounded-lg bg-brand-purple flex items-center justify-center text-white font-bold blob-1'>
+                    E
+                </div>
+<span class='font-bold text-xl text-gray-800'>EduDigital</span>
+</div>
+<div class='text-center md:text-left text-sm text-gray-500'>
+<p>WebApp Builder Google Apps Script Blogger/Sites</p>
+<p class='mt-1'>&#169; 2026 Edudigital.id.</p>
+</div>
+<div class='flex gap-4'>
+<a class='w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-brand-purple hover:shadow-md transition' href='#'><i class='fa-brands fa-facebook-f'></i></a>
+<a class='w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-brand-purple hover:shadow-md transition' href='#'><i class='fa-brands fa-instagram'></i></a>
+<a class='w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-brand-purple hover:shadow-md transition' href='#'><i class='fa-brands fa-youtube'></i></a>
+</div>
+</div>
+</footer>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/387437488-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AEUoTZryy3b2SIwIUFYla6DifX4E:1781808318741';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d3173387891674895264','//www.edudigital.id/p/lms-webapp-builder.html','3173387891674895264');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '3173387891674895264', 'title': 'Edu Digital ID', 'url': 'https://www.edudigital.id/p/lms-webapp-builder.html', 'canonicalUrl': 'https://www.edudigital.id/p/lms-webapp-builder.html', 'homepageUrl': 'https://www.edudigital.id/', 'searchUrl': 'https://www.edudigital.id/search', 'canonicalHomepageUrl': 'https://www.edudigital.id/', 'blogspotFaviconUrl': 'https://www.edudigital.id/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': true, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'id', 'localeUnderscoreDelimited': 'id', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Edu Digital ID - Atom\x22 href\x3d\x22https://www.edudigital.id/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Edu Digital ID - RSS\x22 href\x3d\x22https://www.edudigital.id/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Edu Digital ID - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/3173387891674895264/posts/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/cd96ebb13b57568d', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Dapatkan link', 'key': 'link', 'shareMessage': 'Dapatkan link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Bagikan ke Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'X', 'key': 'twitter', 'shareMessage': 'Bagikan ke X', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Bagikan ke Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27id\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Baca selengkapnya', 'pageType': 'static_page', 'pageId': '7602129351725913971', 'pageName': 'LMS WebApp Builder', 'pageTitle': 'Edu Digital ID: LMS WebApp Builder'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Tautan disalin ke papan klip!', 'ok': 'Oke', 'postLink': 'Tautan Pos'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Khusus', 'isResponsive': true, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'LMS WebApp Builder', 'description': '                 WebAPP Builder GAS-Blogger                                                                                                 ...', 'featuredImage': 'https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_t7M_l2HHO1KYg8ArAXpM8LmPnAtrfNO9G1QJMrqIZyvy8PvGlHTNsWWSekMD24ryhaWb_rHYMvgKiamI8CVUT3tQ', 'url': 'https://www.edudigital.id/p/lms-webapp-builder.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': true, 'isPost': false, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'pageId': 7602129351725913971}}, {'name': 'widgets', 'data': [{'title': 'Postingan Blog', 'type': 'Blog', 'sectionId': 'main-blog', 'id': 'Blog1', 'posts': [{'id': '7602129351725913971', 'title': 'LMS WebApp Builder', 'featuredImage': 'https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_t7M_l2HHO1KYg8ArAXpM8LmPnAtrfNO9G1QJMrqIZyvy8PvGlHTNsWWSekMD24ryhaWb_rHYMvgKiamI8CVUT3tQ', 'showInlineAds': true}], 'headerByline': {'regionName': 'header1', 'items': [{'name': 'share', 'label': ''}, {'name': 'timestamp', 'label': ''}]}, 'footerBylines': [{'regionName': 'footer1', 'items': [{'name': 'comments', 'label': 'komentar'}, {'name': 'icons', 'label': ''}]}, {'regionName': 'footer2', 'items': [{'name': 'labels', 'label': ''}]}, {'regionName': 'footer3', 'items': [{'name': 'location', 'label': 'Lokasi:'}]}], 'allBylineItems': [{'name': 'share', 'label': ''}, {'name': 'timestamp', 'label': ''}, {'name': 'comments', 'label': 'komentar'}, {'name': 'icons', 'label': ''}, {'name': 'labels', 'label': ''}, {'name': 'location', 'label': 'Lokasi:'}]}]}]);
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main-blog', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/1053750561-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/828616780-lightbox_bundle.css'}, 'displayModeFull'));
+</script>
+</body>
+</html>
